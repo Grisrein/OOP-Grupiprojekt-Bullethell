@@ -59,58 +59,59 @@ public class Mangupaneel extends JPanel implements ActionListener, KeyListener {
         repaint();
     }
 
-    private void uuendaMangu() {
+    private void uuendaMangu() { //uuendab mängu seisundit
         mangija.uuenda();
-        haldaTakistusi();
-        kontrolliKokkuporgeid();
+        haldaTakistusi(); //loob ja uuendab takistuste positsioone
+        kontrolliKokkuporgeid(); 
     }
 
     public int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    private void haldaTakistusi() {
+    private void haldaTakistusi() { //haldab takistuste loomist ja liikumist
         long praeguneAeg = System.currentTimeMillis();
         // Aeg mis takistuste vahel
         if (praeguneAeg - viimaneTakistuseAeg > takistuseInterval) {
+            //loob uue takistuse ja lisab takistuste listi
             takistused.add(new Takistus(LAIUS, (int)(Math.random() * (KORGUS - 30)), 30, 30));
             viimaneTakistuseAeg = praeguneAeg;
             takistuseInterval = getRandomNumber(500,takistuseIntervalMax); //Uuendab järgmise takistuse loomise ajavahemikku
             takistuseIntervalMax -= 20;
         }
 
-        takistused.forEach(Takistus::uuenda);
-        takistused.removeIf(takistus -> takistus.x < -30);
+        takistused.forEach(Takistus::uuenda); // uuendab takistuse positsiooni
+        takistused.removeIf(takistus -> takistus.x < -30);// eemaldab takistused, mis on ekraanilt väljas
     }
 
     private void kontrolliKokkuporgeid() {
         Rectangle mangijaPiirid = mangija.saadaPiirid();
         for (Takistus takistus : takistused) {
-            if (takistus.saadaPiirid().intersects(mangijaPiirid)) {
-                taimer.stop();
+            if (takistus.saadaPiirid().intersects(mangijaPiirid)) { //kui mängija ja takistuse piirid kattuvad
+                taimer.stop(); //peatab taimeri
                 aeg.stop();
                 JOptionPane.showMessageDialog(this, "Mäng läbi! Teie lõplik aeg oli " + aegLõpp);
-                System.exit(0);
+                System.exit(0); //väljub programmist
             }
         }
     }
 
     @Override
-    public void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) { //sellega saame mängu graafilised komponendid joonistada
         super.paintComponent(g);
-        joonista(g);
+        joonista(g); //mängu elemendid
     }
 
     public void joonista(Graphics g) {
-        mangija.joonista(g);
-        for (Takistus takistus : takistused) {
-            takistus.joonista(g);
+        mangija.joonista(g); //joonistab mängija
+        for (Takistus takistus : takistused) { //käib takistused läbi
+            takistus.joonista(g); //joonistab takistused
         }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        mangija.klahviVajutus(e);
+        mangija.klahviVajutus(e); //saame tänu sellele mängijat juhtida
     }
 
     @Override
