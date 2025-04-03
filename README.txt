@@ -44,13 +44,14 @@ Gris (15h) - Programmide puhastamine ja edasi töötlemine, taimer, githubiga te
 
 Mured
 --------------------------------------------------
-1. Me tegime juba graafilise liidesega programmi, oli tsipa raske aru Saada kuidas need asjad tõlgivad
+1. Me tegime juba graafilise liidesega programmi, oli tsipa raske aru saada kuidas need asjad tõlgivad
 2. Meil ei küsita mängijalt midagi (saab küll vajelda, et programm küsib liikumis inputi)
+3. Takistuste tekkimise meetodile oleks vaja lisada piir ka miinimumile, kuna umbes 80 sekundi jooksul hakkavad takistustest seined olmuma millest ei ole kerge mööda saada
 
 Hinnang
 --------------------------------------------------
 Gris: Esimese programmi kohta ütleks, et tuli väga korralik. Järgmine kord tahaks mängudisaini poolist rohkem arendada ja korrektsemad klassid luua
-Mikk:
+Mikk: Päris meeldiv nokitsemine oli. Juba ootan järgmisi projekte, kuna see oli päris kaasahaarav.
 
 Testimine
 --------------------------------------------------
