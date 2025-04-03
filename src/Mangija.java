@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-class Mangija {
+public class Mangija {
     int x = 100, y = 150, dx = 0, dy = 0;
     private final int KIIRUS = 5;
     private final int SUURUS = 50;
@@ -10,7 +10,7 @@ class Mangija {
         x += dx;
         y += dy;
 
-        //Piirid, et mängija ei saaks ekraanist kaugemale liikuda
+        //Lisab piirid, et mängija ei saaks ekraanist välja liikuda
         int minX = 0, maxX = 800 - SUURUS;
         int minY = 0, maxY = 300 - SUURUS;
 

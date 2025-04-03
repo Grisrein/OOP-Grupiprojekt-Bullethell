@@ -1,12 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.ArrayList;
-import java.util.List;
 
-// Peamine klass mänguakna seadistamiseks
-public class Mang extends JFrame {
-    public Mang() {
+// Peamine klass mänguakna seadistamiseks ja töölepanekuks
+public class Peaklass extends JFrame {
+    public Peaklass() {
         this.add(new Mangupaneel());
         this.setTitle("Mäng");
         this.setResizable(false);
@@ -14,9 +11,10 @@ public class Mang extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
     }
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(Mang::new);
+        EventQueue.invokeLater(Peaklass::new);
     }
 }

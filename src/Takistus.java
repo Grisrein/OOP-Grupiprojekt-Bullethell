@@ -1,6 +1,6 @@
 import java.awt.*;
 
-class Takistus {
+public class Takistus {
     int x, y, laius, korgus;
 
     public Takistus(int x, int y, int laius, int korgus) {
