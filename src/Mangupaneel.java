@@ -65,7 +65,7 @@ public class Mangupaneel extends JPanel implements ActionListener, KeyListener {
         kontrolliKokkuporgeid();
     }
 
-    public int getRandomNumber(int min, int max) {
+    public int getRandomNumber(int min, int max) {  //Annab tagasi suvalise numbri min ja max-1 vahemikus
         return (int) ((Math.random() * (max - min)) + min);
     }
 
