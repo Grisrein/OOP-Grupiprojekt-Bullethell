@@ -39,8 +39,8 @@ Samuti tegime terve algse programmi ühte java faili ja siis hiljem eraldasime n
 
 Panused
 --------------------------------------------------
-Mikk (10h) - Algne programm. Mängija, takistused, graafiline liides
-Gris (10h) - Programmide puhastamine ja edasi töötlemine, taimer, githubiga tegelemine
+Mikk (20h) - Algne programm. Mängija, takistused, graafiline liides
+Gris (15h) - Programmide puhastamine ja edasi töötlemine, taimer, githubiga tegelemine
 
 Mured
 --------------------------------------------------
